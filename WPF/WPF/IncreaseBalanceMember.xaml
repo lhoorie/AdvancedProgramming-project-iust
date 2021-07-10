@@ -1,0 +1,337 @@
+﻿<Window x:Class="WPF.IncreaseBalanceMember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="IncreaseBalanceMember" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.3*"/>
+                <RowDefinition Height="1.2*"/>
+                <RowDefinition Height="0.4*"/>
+                <RowDefinition Height="0.9*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border CornerRadius="10" Grid.RowSpan="6">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#f083da" Offset="0.6"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="exitButton" Grid.Column="1"
+                        Content="X"
+                        Height="20"
+                        Width="20"
+                        FontSize="10"
+                        Foreground="White"
+                        Background="Transparent"
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Center" Click="ExitButton_Click"/>
+            </Grid>
+
+            <StackPanel Grid.Row="1">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Price:"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="235"
+                         Height="25"
+                         Opacity="1"
+                         Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Cash100"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="Price"
+                         FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="20$"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="80"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="150,3,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="70"
+                    Height="2"
+                    Margin="156,0,0,0"
+                    Background="White"
+                    Opacity="0.5"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBlock FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Credit Card Number:"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="235"
+                         Height="25"
+                         Opacity="1"
+                         Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="CreditCardCheck"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="First"
+                         FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="1234"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="60"
+                         MaxLength="4"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="63,0,0,0"/>
+                    <TextBox x:Name="Second"
+                         FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="1234"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="60"
+                         Height="25"
+                         Opacity="0.5"
+                         MaxLength="4"
+                         Margin="3,0,0,0"/>
+                    <TextBox x:Name="Third"
+                         FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="1234"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="60"
+                         Height="25"
+                         Opacity="0.5"
+                         MaxLength="4"
+                         Margin="3,0,0,0"/>
+                    <TextBox x:Name="Fourth"
+                         FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="1234"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         MaxLength="4"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="60"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="3,0,0,0"/>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="50"
+                    Height="2"
+                    Margin="70,0,0,0"
+                    Background="White"
+                    Opacity="0.5"/>
+                    <Border Width="50"
+                    Height="2"
+                    Margin="13,0,0,0"
+                    Background="White"
+                    Opacity="0.5"/>
+                    <Border Width="50"
+                    Height="2"
+                    Margin="13,0,0,0"
+                    Background="White"
+                    Opacity="0.5"/>
+                    <Border Width="50"
+                    Height="2"
+                    Margin="13,0,0,0"
+                    Background="White"
+                    Opacity="0.5"/>
+                </StackPanel>
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="3">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Expiration Date:"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="235"
+                         Height="25"
+                         Opacity="1"
+                         Margin="63,10,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="CardAccountDetails"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="Year"
+                         FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Year"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="60"
+                         MaxLength="4"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="115,3,0,0"/>
+                    <TextBox x:Name="Month"
+                         FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Month"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="60"
+                         MaxLength="2"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="10,3,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="50"
+                    Height="2"
+                    Margin="120,0,0,0"
+                    Background="White"
+                    Opacity="0.5"/>
+                    <Border Width="60"
+                    Height="2"
+                    Margin="17,0,0,0"
+                    Background="White"
+                    Opacity="0.5"/>
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="4">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="CVV2:"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="235"
+                         Height="25"
+                         Opacity="1"
+                         Margin="63,10,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="CardBulleted"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="CVV2"
+                         FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="CVV2"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         HorizontalContentAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         Width="60"
+                         MaxLength="4"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="150,3,0,0"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Border Width="50"
+                    Height="2"
+                    Margin="156,0,0,0"
+                    Background="White"
+                    Opacity="0.5"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="5">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                    <Button x:Name="BackButton" Width="80" Height="40" Content="BACK" Margin="80,0,30,0" Click="BackButton_Click" FontSize="16"/>
+                    <Button x:Name="PayButton" Width="120" Height="40" Content="PAY NOW" Click="PayButton_Click" FontSize="16"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

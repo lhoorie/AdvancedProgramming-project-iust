@@ -61,10 +61,115 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="addNewBook.xaml.cs">
+      <DependentUpon>addNewBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPnl.xaml.cs">
+      <DependentUpon>AdminPnl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd.cs" />
+    <Compile Include="BooksEmployee.xaml.cs">
+      <DependentUpon>BooksEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BorrowBook.xaml.cs">
+      <DependentUpon>BorrowBook.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ObservableObject.cs" />
+    <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="editEmployeeInfo.xaml.cs">
+      <DependentUpon>editEmployeeInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="editMemberInfo.xaml.cs">
+      <DependentUpon>editMemberInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeePnl.xaml.cs">
+      <DependentUpon>EmployeePnl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeWallet.xaml.cs">
+      <DependentUpon>EmployeeWallet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IncreaseBalanceMember.xaml.cs">
+      <DependentUpon>IncreaseBalanceMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPnl.xaml.cs">
+      <DependentUpon>MemberPnl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MemberWallet.xaml.cs">
+      <DependentUpon>MemberWallet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\viewModel\DiscoveryViewModel.cs" />
+    <Compile Include="MVVM\viewModel\HomeViewModel.cs" />
+    <Compile Include="MVVM\viewModel\MainViewModel.cs" />
+    <Compile Include="MVVM\view\DiscoveryView.xaml.cs">
+      <DependentUpon>DiscoveryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\view\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyBorrowedBooks.xaml.cs">
+      <DependentUpon>MyBorrowedBooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.xaml.cs">
+      <DependentUpon>Payment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="searchBookForMember.xaml.cs">
+      <DependentUpon>searchBookForMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showBank.xaml.cs">
+      <DependentUpon>showBank.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showBooks.xaml.cs">
+      <DependentUpon>showBooks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showBooksToMember.xaml.cs">
+      <DependentUpon>showBooksToMember.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showEmployees.xaml.cs">
+      <DependentUpon>showEmployees.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="showMembersToEmployee.xaml.cs">
+      <DependentUpon>showMembersToEmployee.xaml</DependentUpon>
+    </Compile>
+    <Page Include="addNewBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AdminPnl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BooksEmployee.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BorrowBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ButtonTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="editEmployeeInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="editMemberInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeePnl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EmployeeWallet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IncreaseBalanceMember.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -80,7 +185,55 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MemberPnl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MemberWallet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\view\DiscoveryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\view\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyBorrowedBooks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Payment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="searchBookForMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showBank.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showBooks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showBooksToMember.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showEmployees.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="showMembersToEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,6 +267,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\choosePhoto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MVVM\Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

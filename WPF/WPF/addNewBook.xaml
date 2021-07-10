@@ -1,0 +1,191 @@
+﻿<Window x:Class="WPF.addNewBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF"
+        mc:Ignorable="d"
+        Title="addNewBook" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.06*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#f083da" Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="exitButton" Grid.Column="1"
+                        Content="X"
+                        Height="20"
+                        Width="20"
+                        FontSize="10"
+                        Foreground="White"
+                        Background="Transparent"
+                        Margin="0,5,0,0"
+                        HorizontalAlignment="Center" Click="ExitButton_Click"/>
+            </Grid>
+
+
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Adding New Book"
+                           FontWeight="Light"
+                           Margin="0,0,0,20"
+                           FontFamily="Segoe UI Light"
+                           FontSize="30"
+                           Foreground="White"
+                           HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Book's Name"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Book"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Author's Name"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Pen"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Genre"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="Typewriter"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Book's Number"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="FormatListNumberedRtl"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox FontFamily="Segoe UI Light"
+                         FontWeight="Light"
+                         Text="Book's ID"
+                         FontSize="20"
+                         HorizontalAlignment="Center"
+                         Foreground="White"
+                         Background="Transparent"
+                         BorderThickness="0"
+                         Width="235"
+                         HorizontalContentAlignment="Left"
+                         Height="25"
+                         Opacity="0.5"
+                         Margin="63,0,0,0"/>
+                    <iconPacks:PackIconMaterial Kind="SortNumericVariant"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                    Height="2"
+                    Background="White"
+                    Opacity="0.5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,30,0,0">
+                    <Button x:Name="BackButton" Width="80" Height="40" Content="BACK" Margin="80,0,60,0" FontSize="16" Click="BackButton_Click"/>
+                    <Button x:Name="addNewBookButton" Width="80" Height="40" Content="Add" FontSize="16" Click="AddNewBookButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+
+
+
+        </Grid>
+    </Grid>
+</Window>
+

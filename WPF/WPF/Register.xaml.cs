@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 namespace WPF
 {
@@ -19,9 +21,11 @@ namespace WPF
     /// </summary>
     public partial class Window1 : Window
     {
+
         public Window1()
         {
             InitializeComponent();
+            DataContext = this;
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -30,27 +34,32 @@ namespace WPF
                 DragMove();
             }
         }
-
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();
         }
-
         private void PayButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Payment payment = new Payment();
+            payment.Show();
+            this.Close();
         }
 
         private void ChoosePhotoButton_Click(object sender, RoutedEventArgs e)
         {
-
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "jpg files (*.jpg)|*.jpg|png files (*.png)|*.png";
+            if (fileDialog.ShowDialog() == true)
+            {
+                var uriSource = new Uri(System.IO.Path.GetFullPath(fileDialog.FileName));
+                profile.Source = new BitmapImage(uriSource);
+            }
         }
     }
 }
