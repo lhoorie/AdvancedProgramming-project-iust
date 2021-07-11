@@ -1,4 +1,4 @@
-﻿<Window x:Class="WPF.MainWindow"
+﻿<Window x:Class="WPF.removeEmployee"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,24 +6,23 @@
         xmlns:local="clr-namespace:WPF"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="380"
+        Title="removeEmployee" Height="450" Width="380"
         AllowsTransparency="True" Background="Transparent"
         WindowStyle="None" ResizeMode="NoResize"
         MouseDown="Window_MouseDown">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="0.13*"/>
-                <RowDefinition/>
+                <RowDefinition Height="0.06*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            
-            <Border CornerRadius="10" Grid.RowSpan="3">
+
+            <Border CornerRadius="10" Grid.RowSpan="2">
                 <Border.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="#7be9f6" Offset="0.0"/>
-                        <GradientStop Color="#f083da" Offset="1"/>
+                        <GradientStop Color="#f083da" Offset="0.8"/>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
@@ -35,59 +34,26 @@
                 </Grid.ColumnDefinitions>
                 <Button x:Name="exitButton" Grid.Column="1"
                         Content="X"
-                        Height="20"
                         Width="20"
                         FontSize="10"
                         Foreground="White"
                         Background="Transparent"
-                        Margin="0,5,0,0"
-                        HorizontalAlignment="Center" Click="ExitButton_Click"/>
+                        Margin="5,5,4,0"
+                        HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Click="ExitButton_Click"/>
             </Grid>
 
-
-            <StackPanel Grid.Row="1" VerticalAlignment="Center">
-                <Image Source="Images/book.png" Width="80"/>
-                <TextBlock Text="Library"
+            <StackPanel Grid.Row="1">
+                <TextBlock Text="Please enter the username&#x0a;of the employee that&#x0a;you want to remove."
                            FontWeight="Light"
+                           Margin="20,40,20,0"
                            FontFamily="Segoe UI Light"
-                           FontSize="22"
+                           FontSize="23"
                            Foreground="White"
                            HorizontalAlignment="Center"/>
-            </StackPanel>
-
-
-            <StackPanel Grid.Row="2">
-                <StackPanel Orientation="Horizontal">
-                    <TextBox FontFamily="Segoe UI Light"
-                         x:Name="username_tb"
-                         FontWeight="Light"
-                         Text="Username"
-                         FontSize="20"
-                         HorizontalAlignment="Center"
-                         Foreground="White"
-                         Background="Transparent"
-                         BorderThickness="0"
-                         Width="235"
-                         HorizontalContentAlignment="Left"
-                         Height="25"
-                         Opacity="0.5"
-                         Margin="63,0,0,0"/>
-                    <iconPacks:PackIconMaterial Kind="Account"
-                                            VerticalAlignment="Center"
-                                            HorizontalAlignment="Center"
-                                            Foreground="White"/>
-                </StackPanel>
-                <Border Width="250"
-                    Height="2"
-                    Background="White"
-                    Opacity="0.5"/>
-                
-                
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                    <PasswordBox FontFamily="Segoe UI Light"
-                         x:Name="pass_tb"
+                    <TextBox FontFamily="Segoe UI Light"
                          FontWeight="Light"
-                         Password="Password"
+                         Text="Employee's Username"
                          FontSize="20"
                          HorizontalAlignment="Center"
                          Foreground="White"
@@ -98,7 +64,7 @@
                          Height="25"
                          Opacity="0.5"
                          Margin="63,0,0,0"/>
-                    <iconPacks:PackIconMaterial Kind="FormTextboxPassword"
+                    <iconPacks:PackIconMaterial Kind="AccountCancel"
                                             VerticalAlignment="Center"
                                             HorizontalAlignment="Center"
                                             Foreground="White"/>
@@ -108,13 +74,14 @@
                     Background="White"
                     Opacity="0.5"/>
 
-                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
-                    <Button x:Name="LoginButton" Width="100" Height="40" Content="LOGIN" Margin="60,0,60,0" Click="LoginButton_Click"/>
-                    <Button x:Name="RegistretButton" Width="100" Height="40" Content="REGISTER" Click="RegisterButton_Click"/>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,40,0,0">
+                    <Button x:Name="BackButton" Width="80" Height="40" Content="BACK" Margin="80,0,30,0" FontSize="16" Click="BackButton_Click"/>
+                    <Button x:Name="RemoveEmployeeButton" Width="100" Height="40" Content="Remove" FontSize="16"/>
                 </StackPanel>
+
             </StackPanel>
-
-
         </Grid>
     </Grid>
 </Window>
+

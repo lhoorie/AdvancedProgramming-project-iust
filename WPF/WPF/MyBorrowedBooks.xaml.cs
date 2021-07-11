@@ -19,7 +19,7 @@ namespace WPF
     /// </summary>
     public partial class MyBorrowedBooks : Window
     {
-        public MyBorrowedBooks()
+        public MyBorrowedBooks(Member member)
         {
             InitializeComponent();
         }

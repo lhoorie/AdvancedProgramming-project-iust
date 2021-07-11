@@ -11,21 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Collections.ObjectModel;
 
 namespace WPF
 {
     /// <summary>
-    /// Interaction logic for showBooksToMember.xaml
+    /// Interaction logic for removeEmployee.xaml
     /// </summary>
-    public partial class showBooksToMember : Window
+    public partial class removeEmployee : Window
     {
-        Member member;
-        public ObservableCollection<Book> bookListToShow { get; set; } = Book.booksList();
-        public showBooksToMember(Member member)
+        public removeEmployee()
         {
             InitializeComponent();
-            this.member = member;
             DataContext = this;
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -37,26 +33,14 @@ namespace WPF
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            MemberPnl memberPnl = new MemberPnl(member);
-            memberPnl.Show();
+            EmployeePnl employeePnl = new EmployeePnl();
+            employeePnl.Show();
             this.Close();
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
-        }
-
-        private void BorrowBookButton_Click(object sender, RoutedEventArgs e)
-        {
-            BorrowBook borrowBook = new BorrowBook(member);
-            borrowBook.Show();
-            this.Close();
-        }
-
-        private void SearchBookButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

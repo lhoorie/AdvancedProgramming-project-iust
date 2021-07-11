@@ -19,9 +19,11 @@ namespace WPF
     /// </summary>
     public partial class MemberWallet : Window
     {
-        public MemberWallet()
+        Member member;
+        public MemberWallet(Member member)
         {
             InitializeComponent();
+            this.member = member;
             DataContext = this;
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)

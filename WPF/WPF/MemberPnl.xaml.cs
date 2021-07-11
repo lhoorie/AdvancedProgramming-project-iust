@@ -19,9 +19,12 @@ namespace WPF
     /// </summary>
     public partial class MemberPnl : Window
     {
-        public MemberPnl()
+        Member member;
+        public MemberPnl(Member member)
         {
             InitializeComponent();
+            this.member = member;
+            DataContext = this;
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -33,6 +36,41 @@ namespace WPF
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
+            this.Close();
+        }
+
+        private void ShowBooksToMember_Click(object sender, RoutedEventArgs e)
+        {
+            showBooksToMember showBooksToMember = new showBooksToMember(member);
+            showBooksToMember.Show();
+            this.Close();
+        }
+
+        private void MyBooks_Click(object sender, RoutedEventArgs e)
+        {
+            MyBorrowedBooks myBorrowedBooks = new MyBorrowedBooks(member);
+            myBorrowedBooks.Show();
+            this.Close();
+        }
+
+        private void Membership_Click(object sender, RoutedEventArgs e)
+        {
+            MembershipInfo membershipInfo = new MembershipInfo(member);
+            membershipInfo.Show();
+            this.Close();
+        }
+
+        private void MemberWlt_Click(object sender, RoutedEventArgs e)
+        {
+            MemberWallet memberWallet = new MemberWallet(member);
+            memberWallet.Show();
+            this.Close();
+        }
+
+        private void EditMember_Click(object sender, RoutedEventArgs e)
+        {
+            editMemberInfo editmemberinfo = new editMemberInfo(member);
+            editmemberinfo.Show();
             this.Close();
         }
     }

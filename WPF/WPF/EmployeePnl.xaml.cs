@@ -19,9 +19,11 @@ namespace WPF
     /// </summary>
     public partial class EmployeePnl : Window
     {
-        public EmployeePnl()
+        Employee emp;
+        public EmployeePnl(Employee emp)
         {
             InitializeComponent();
+            this.emp = emp;
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

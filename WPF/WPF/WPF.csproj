@@ -64,6 +64,9 @@
     <Compile Include="addNewBook.xaml.cs">
       <DependentUpon>addNewBook.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddNewEmployee.xaml.cs">
+      <DependentUpon>AddNewEmployee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminPnl.xaml.cs">
       <DependentUpon>AdminPnl.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,9 @@
     <Compile Include="MemberPnl.xaml.cs">
       <DependentUpon>MemberPnl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MembershipInfo.xaml.cs">
+      <DependentUpon>MembershipInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MemberWallet.xaml.cs">
       <DependentUpon>MemberWallet.xaml</DependentUpon>
     </Compile>
@@ -115,6 +121,9 @@
     <Compile Include="Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
+    <Compile Include="removeEmployee.xaml.cs">
+      <DependentUpon>removeEmployee.xaml</DependentUpon>
+    </Compile>
     <Compile Include="searchBookForMember.xaml.cs">
       <DependentUpon>searchBookForMember.xaml</DependentUpon>
     </Compile>
@@ -134,6 +143,10 @@
       <DependentUpon>showMembersToEmployee.xaml</DependentUpon>
     </Compile>
     <Page Include="addNewBook.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddNewEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,6 +202,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MembershipInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MemberWallet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -210,6 +227,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="removeEmployee.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

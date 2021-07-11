@@ -44,8 +44,8 @@
 
             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,0">
                 <Button x:Name="BackButton" Width="60" Height="40" Content="BACK" Margin="35,0,10,0" FontSize="16" Click="BackButton_Click"/>
-                <Button x:Name="BorrowBookButton" Width="120" Height="40" Content="Borrow Book" FontSize="16" Margin="0,0,10,0"/>
-                <Button x:Name="SearchBookButton" Width="120" Height="40" Content="Search Book" FontSize="16"/>
+                <Button x:Name="BorrowBookButton" Width="120" Height="40" Content="Borrow Book" FontSize="16" Margin="0,0,10,0" Click="BorrowBookButton_Click"/>
+                <Button x:Name="SearchBookButton" Width="120" Height="40" Content="Search Book" FontSize="16" Click="SearchBookButton_Click"/>
             </StackPanel>
 
             <ScrollViewer Grid.Row="2">

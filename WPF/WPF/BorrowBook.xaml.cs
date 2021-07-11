@@ -19,9 +19,12 @@ namespace WPF
     /// </summary>
     public partial class BorrowBook : Window
     {
-        public BorrowBook()
+        Member member;
+        public BorrowBook(Member member)
         {
             InitializeComponent();
+            this.member = member;
+            DataContext = this;
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -38,9 +41,14 @@ namespace WPF
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            showBooksToMember showBooksToMember = new showBooksToMember();
+            showBooksToMember showBooksToMember = new showBooksToMember(member);
             showBooksToMember.Show();
             this.Close();
+        }
+
+        private void BorrowBookButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

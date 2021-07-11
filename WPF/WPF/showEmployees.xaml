@@ -5,8 +5,107 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF"
         mc:Ignorable="d"
-        Title="showEmployees" Height="450" Width="800">
+        Title="showEmployees" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown">
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.07*"/>
+                <RowDefinition Height="0.15*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border CornerRadius="10" Grid.RowSpan="3">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#7be9f6" Offset="0.0"/>
+                        <GradientStop Color="#f083da" Offset="0.8"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="exitButton" Grid.Column="1"
+                        Content="X"
+                        Width="20"
+                        FontSize="10"
+                        Foreground="White"
+                        Background="Transparent"
+                        Margin="5,5,4,0"
+                        HorizontalAlignment="Center" Click="ExitButton_Click"/>
+            </Grid>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,0,0">
+                <Button x:Name="BackButton" Width="60" Height="40" Content="BACK" Margin="35,0,10,0" FontSize="16" Click="BackButton_Click"/>
+                <Button x:Name="AddNewEmployeeButton" Width="60" Height="40" Content="ADD" FontSize="16" Margin="0,0,10,0"/>
+                <Button x:Name="PayButton" Width="60" Height="40" Content="PAY" FontSize="16" Margin="0,0,10,0"/>
+                <Button x:Name="SearchBookButton" Width="80" Height="40" Content="Remove" FontSize="16"/>
+            </StackPanel>
+
+            <ScrollViewer Grid.Row="2">
+                <ItemsControl Grid.Row="2" ItemsSource="{Binding employees, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Grid.Column="0"
+                                           Text="{Binding userName}"
+                                           FontWeight="Light"
+                                           Margin="0,3,0,0"
+                                           FontFamily="Segoe UI Light"
+                                           FontSize="15"
+                                           Foreground="White"
+                                           HorizontalAlignment="Center">
+                                    </TextBlock>
+                                    <TextBlock Grid.Column="1"
+                                           Text="{Binding email}"
+                                           FontWeight="Light"
+                                           Margin="0,3,0,0"
+                                           FontFamily="Segoe UI Light"
+                                           FontSize="15"
+                                           Foreground="White"
+                                           HorizontalAlignment="Center">
+                                    </TextBlock>
+                                    <TextBlock Grid.Column="2"
+                                           Text="{Binding phoneNumber}"
+                                           FontWeight="Light"
+                                           Margin="0,3,0,0"
+                                           FontFamily="Segoe UI Light"
+                                           FontSize="15"
+                                           Foreground="White"
+                                           HorizontalAlignment="Center">
+                                    </TextBlock>
+                                    <TextBlock Grid.Column="3"
+                                           Text="{Binding balance}"
+                                           FontWeight="Light"
+                                           Margin="0,3,0,0"
+                                           FontFamily="Segoe UI Light"
+                                           FontSize="15"
+                                           Foreground="White"
+                                           HorizontalAlignment="Center">
+                                    </TextBlock>
+                                    
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
+
+        </Grid>
     </Grid>
 </Window>

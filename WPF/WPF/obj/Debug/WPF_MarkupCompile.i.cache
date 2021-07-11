@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Downloads\99002\AP\FinalProject\WPF\WPF\App.xaml
-241013395662
+271157001878
 
-34-1307464681
+37-1892944331
 151206416159
-addNewBook.xaml;AdminPnl.xaml;BooksEmployee.xaml;BorrowBook.xaml;ButtonTheme.xaml;editEmployeeInfo.xaml;editMemberInfo.xaml;EmployeePnl.xaml;EmployeeWallet.xaml;IncreaseBalanceMember.xaml;MainWindow.xaml;MemberPnl.xaml;MemberWallet.xaml;MVVM\view\DiscoveryView.xaml;MVVM\view\HomeView.xaml;MyBorrowedBooks.xaml;Payment.xaml;Register.xaml;searchBookForMember.xaml;showBank.xaml;showBooks.xaml;showBooksToMember.xaml;showEmployees.xaml;showMembersToEmployee.xaml;
+addNewBook.xaml;AddNewEmployee.xaml;AdminPnl.xaml;BooksEmployee.xaml;BorrowBook.xaml;ButtonTheme.xaml;editEmployeeInfo.xaml;editMemberInfo.xaml;EmployeePnl.xaml;EmployeeWallet.xaml;IncreaseBalanceMember.xaml;MainWindow.xaml;MemberPnl.xaml;MembershipInfo.xaml;MemberWallet.xaml;MVVM\view\DiscoveryView.xaml;MVVM\view\HomeView.xaml;MyBorrowedBooks.xaml;Payment.xaml;Register.xaml;removeEmployee.xaml;searchBookForMember.xaml;showBank.xaml;showBooks.xaml;showBooksToMember.xaml;showEmployees.xaml;showMembersToEmployee.xaml;
 
 True
 

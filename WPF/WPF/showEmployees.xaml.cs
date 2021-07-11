@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace WPF
 {
@@ -19,9 +20,29 @@ namespace WPF
     /// </summary>
     public partial class showEmployees : Window
     {
+        public ObservableCollection<Employee> employees { get; set; } = Employee.employeesList();
         public showEmployees()
         {
             InitializeComponent();
+            DataContext = this;
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            EmployeePnl employeePnl = new EmployeePnl();
+            employeePnl.Show();
+            this.Close();
+        }
+
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

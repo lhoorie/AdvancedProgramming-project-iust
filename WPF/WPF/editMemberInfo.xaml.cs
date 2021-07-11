@@ -20,9 +20,11 @@ namespace WPF
     /// </summary>
     public partial class editMemberInfo : Window
     {
-        public editMemberInfo()
+        Member member;
+        public editMemberInfo(Member member)
         {
             InitializeComponent();
+            this.member = member;
             DataContext = this;
         }
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
